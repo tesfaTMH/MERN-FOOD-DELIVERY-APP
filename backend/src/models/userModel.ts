@@ -3,24 +3,24 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema(
   {
     auth0Id: {
-      type: string,
+      type: String,
       required: true,
     },
     email: {
-      type: string,
+      type: String,
       required: true,
     },
     name: {
-      type: string,
+      type: String,
     },
     addressLine1: {
-      type: string,
+      type: String,
     },
     city: {
-      type: string,
+      type: String,
     },
     country: {
-      type: string,
+      type: String,
     },
   },
   { timestamps: true }
