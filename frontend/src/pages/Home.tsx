@@ -11,7 +11,7 @@ export const Home = () => {
         <span className="text-xl">Food is just a click away</span>
       </div>
       <div className="grid md:grid-cols-2 gap-5">
-        <img src={landingImage} />
+        <img src={landingImage} style={{ width: "40%" }} />
         <div className="flex flex-col items-center justify-center gap-4 text-center">
           <span className="font-bold text-2xl tracking-tighter">
             To order takeway faster

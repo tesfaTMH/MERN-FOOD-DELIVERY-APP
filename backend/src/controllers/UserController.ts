@@ -23,10 +23,14 @@ const createUser = async (req: Request, res: Response) => {
 
 const getUser = async (req: Request, res: Response) => {
   try {
-    const foundUser = await User.find({});
+    const foundUser = await User.findOne({ _id: req.userId });
+    if (!foundUser) {
+      return res.status(404).json({ message: "User not found." });
+    }
     res.json(foundUser);
   } catch (error) {
     console.log(error);
+    return res.status(500).json({ message: "Something went wrong" });
   }
 };
 
