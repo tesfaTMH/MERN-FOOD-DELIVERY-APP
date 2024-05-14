@@ -3,6 +3,7 @@ import cors from "cors";
 import "dotenv/config";
 import mongoose from "mongoose";
 import userRoute from "./routes/userRoute";
+import tmhResturantRoute from "./routes/tmhResturantRoute";
 
 import { v2 as cloudinary } from "cloudinary";
 
@@ -27,6 +28,7 @@ app.get("/health", async (req: Request, res: Response) => {
 });
 
 app.use("/api/v1/user", userRoute);
+app.use("/api/v1/resturant", tmhResturantRoute);
 
 app.listen(3000, () => {
   console.log("Server is running on localhost:3000");
